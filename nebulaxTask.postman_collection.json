@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "3f85e2c0-30b5-4724-af37-101e1006b533",
+		"name": "nebulaxTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32529145",
+		"_collection_link": "https://galactic-shuttle-625932.postman.co/workspace/New-Team-Workspace~8060053c-2700-4f59-8913-21a557eef9cc/collection/32529145-3f85e2c0-30b5-4724-af37-101e1006b533?action=share&source=collection_link&creator=32529145"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "book",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "29.99",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "salePrice",
+									"value": "24.99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/product/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "book",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "salePrice",
+									"value": "24.99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/product/updateProduct/66efdbf35e13832f5c943588",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"updateProduct",
+								"66efdbf35e13832f5c943588"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/product/deleteProduct/66efdbf35e13832f5c943588",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"deleteProduct",
+								"66efdbf35e13832f5c943588"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "addProductToCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "ahmed__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpdGlmeWZpdG5lc3MxQGdtYWlsLmNvbSIsImlkIjoiNjZmMTI0NThhMGUzOWE2ZmUzNDJiYjkyIiwiaWF0IjoxNzI3MDgwNzk0fQ.WKGn8fLyjn-T8lvsVSIQFbJte16g4ZyUsX56qSsRmJE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "book",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "29.99",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "salePrice",
+									"value": "24.99",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id\n",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "productId",
+									"value": "66eff9e60f6d19ae949dae13",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/cart/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeProductFromCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "ahmed__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpdGlmeWZpdG5lc3MxQGdtYWlsLmNvbSIsImlkIjoiNjZmMTI0NThhMGUzOWE2ZmUzNDJiYjkyIiwiaWF0IjoxNzI3MDgwNzk0fQ.WKGn8fLyjn-T8lvsVSIQFbJte16g4ZyUsX56qSsRmJE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n  \"productId\": \"66eff9e60f6d19ae949dae13\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/removeProductFromCart/66f12d914e9af8f4c7b25ddb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"removeProductFromCart",
+								"66f12d914e9af8f4c7b25ddb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuantity",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"66eff9e60f6d19ae949dae13\",\r\n  \"quantity\": 5,\r\n    \"_id\": \"66f12d914e9af8f4c7b25ddb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/updateQuantity",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"updateQuantity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCartTotals",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ahmed__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpdGlmeWZpdG5lc3MxQGdtYWlsLmNvbSIsImlkIjoiNjZmMTI0NThhMGUzOWE2ZmUzNDJiYjkyIiwiaWF0IjoxNzI3MDgwNzk0fQ.WKGn8fLyjn-T8lvsVSIQFbJte16g4ZyUsX56qSsRmJE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"66eff9e60f6d19ae949dae13\",\r\n  \"quantity\": 5,\r\n    \"_id\": \"66f12d914e9af8f4c7b25ddb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/getCartTotals",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"getCartTotals"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/signIn",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
